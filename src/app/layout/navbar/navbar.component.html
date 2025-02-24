@@ -1,1 +1,46 @@
-<p>navbar works!</p>
+<nav class="bg-gradient-to-r from-rose-300 to-orange-300 shadow-md">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex h-16 justify-between items-center">
+      
+      <!-- Logo -->
+      <div class="flex items-center">
+        <span class="ml-3 text-3xl md:text-xl font-semibold text-gray-900 truncate">Ticket-Logger</span>
+      </div>
+
+      <!-- Menú desplegable para móvil -->
+      <div class="flex items-center lg:hidden">
+        <button (click)="toggleMenu()" class="text-gray-900 hover:text-orange-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navegación -->
+      <div class="hidden lg:flex space-x-6">
+        <a href="#" class="text-gray-900 hover:text-orange-700 text-xl font-medium">Inicio</a>
+        <a href="http://localhost:4200/products" class="text-gray-900 hover:text-orange-700 text-xl font-medium">Productos mas vendidos</a>
+        <a href="#" class="text-gray-900 hover:text-orange-700 text-xl font-medium">x - x - x - x</a>
+        <a href="#" class="text-gray-900 hover:text-orange-700 text-xl font-medium">y - y - y - y</a>
+      </div>
+
+      <!-- Botones de Login / Registro -->
+      <div class="flex items-center space-x-4">
+        <a href="http://localhost:4200/login" class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition cursor-pointer">
+          Iniciar sesión
+        </a>
+        <a href="http://localhost:4200/register" class="px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition cursor-pointer">
+          Registrarse
+        </a>
+      </div>
+    </div>
+
+    <!-- Menú móvil (invisible por defecto) -->
+    <div *ngIf="isMenuOpen" class="lg:hidden space-y-4 mt-4">
+      <a href="#" class="block text-gray-900 hover:text-orange-700 text-xl font-medium border-b border-gray-300 pb-2">Inicio</a>
+      <a href="#" class="block text-gray-900 hover:text-orange-700 text-xl font-medium border-b border-gray-300 pb-2">Productos mas vendidos</a>
+      <a href="#" class="block text-gray-900 hover:text-orange-700 text-xl font-medium border-b border-gray-300 pb-2">x - x - x - x</a>
+      <a href="#" class="block text-gray-900 hover:text-orange-700 text-xl font-medium border-b border-gray-300 pb-2">y - y - y - y</a>
+    </div>
+  </div>
+</nav>

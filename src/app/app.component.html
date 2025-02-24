@@ -1,9 +1,11 @@
-<app-header></app-header>
+<div class="flex flex-col h-screen">
+  <app-header></app-header>
+  <div class="flex flex-1">
+    
+    <app-main class="flex-1 p-4">
+      <router-outlet></router-outlet>
+    </app-main>
+  </div>
 
-<app-sidebar></app-sidebar>
-
-<app-main>
-  <router-outlet></router-outlet>
-</app-main>
-
-<app-footer></app-footer>
+  <app-footer class="bg-gray-900 text-white text-center p-4"></app-footer>
+</div>

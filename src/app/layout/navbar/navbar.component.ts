@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  isMenuOpen = false; // Estado del menú móvil
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; 
+  }
 }
